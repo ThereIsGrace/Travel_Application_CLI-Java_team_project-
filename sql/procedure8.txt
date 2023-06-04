@@ -1,0 +1,16 @@
+create or replace procedure to_resort_basket(
+    a_user_id                   IN login.user_id%type,
+    a_resort_name               IN resort.resort_name%type,
+    a_nights                    IN resort_basket.nights%type,
+    a_use_date                  IN resort_basket.use_date%type
+)IS 
+    v_resort_place             resort.resort_place%type;
+    v_room_name                resort.room_name%type;
+    v_resort_price             resort.resort_place%type;
+BEGIN
+    select resort_place into v_resort_place from resort where resort_name = a_resort_name;
+    select room_name into v_room_name from resort where resort_name = a_resort_name;
+    select resort_price into v_resort_price from resort where resort_name = a_resort_name;
+    insert into resort_basket values(v_resort_place, a_resort_name, v_room_name, a_nights, v_resort_price, a_user_id, a_use_date);
+    commit;
+END;

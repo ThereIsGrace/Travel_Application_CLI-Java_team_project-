@@ -1,0 +1,12 @@
+create or replace procedure member_to_login(
+    a_user_id               IN login.user_id%TYPE,
+    a_user_pw               IN login.user_pw%TYPE
+)IS
+    v_user_pw               login.user_pw%TYPE;
+BEGIN
+    select user_pw into v_user_pw from member where user_id = a_user_id;
+    if (a_user_pw = v_user_pw) then
+    insert into login values(a_user_id, a_user_pw);
+    commit;
+    end if;
+END;

@@ -1,0 +1,12 @@
+create or replace procedure user_make_member(
+    a_userid        IN member.user_id%TYPE,
+    a_username      IN member.user_name%TYPE,
+    a_userpw        IN member.user_pw%TYPE,
+    a_userphone     IN member.user_phone%TYPE
+)IS 
+BEGIN
+    if(member_login(a_userid, a_userpw)=2) then
+    insert into member values(a_userid, a_username, a_userpw, a_userphone);
+    commit;
+    end if;
+END;

@@ -1,0 +1,14 @@
+create or replace procedure move_from_basket_to_resort(
+    a_resort_place          IN    resort_reserv.resort_place%type,
+    a_resort_name           IN    resort_reserv.resort_name%type,
+    a_room_name             IN    resort_reserv.room_name%type,
+    a_nights                IN    resort_reserv.nights%type,
+    a_resort_price          IN    resort_reserv.resort_price%type,
+    a_user_id               IN    resort_reserv.user_id%type,
+    a_use_date              IN    resort_reserv.use_date%type
+)IS
+    
+BEGIN
+    insert into resort_reserv values(a_resort_place, a_resort_name, a_room_name, a_nights, a_resort_price, a_user_id, a_use_date);
+    commit;
+END;

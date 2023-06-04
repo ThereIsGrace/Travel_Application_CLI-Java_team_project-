@@ -1,0 +1,19 @@
+create or replace procedure move_from_basket_to_flight(
+    a_air_code               IN flight_reserv.air_code%type,
+    a_destination            IN flight_reserv.destination%type,
+    a_airline_name           IN flight_reserv.airline_name%type,
+    a_dep_time               IN flight_reserv.dep_time%type,
+    a_arrival_time           IN flight_reserv.arrival_time%type,
+    a_total_time             IN flight_reserv.total_time%type,
+    a_direct_flight          IN flight_reserv.direct_flight%type,
+    a_price                  IN flight_reserv.price%type,
+    a_userid                 IN flight_reserv.userid%type,
+    a_dep_date               IN flight_reserv.dep_date%type,
+    a_seat_no                IN flight_reserv.seat_no%type
+)is 
+    
+begin
+    insert into flight_reserv values(a_air_code, a_destination, a_airline_name, a_dep_time, a_arrival_time, a_total_time,
+    a_direct_flight, a_price, a_userid, a_dep_date, a_seat_no);
+    commit;
+end;

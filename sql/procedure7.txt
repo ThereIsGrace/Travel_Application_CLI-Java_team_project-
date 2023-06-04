@@ -1,0 +1,25 @@
+create or replace procedure to_flight_basket(
+    a_user_id                      IN member.user_id%type,
+    a_air_code                     IN flight.air_code%type,
+    a_dep_date                     IN flight_basket.dep_date%type,
+    a_seat_no                      IN flight_basket.seat_no%type
+)IS
+    v_destination                  flight.destination%type;
+    v_airline_name                 flight.airline_name%type;
+    v_dep_time                     flight.dep_time%type;
+    v_arrival_time                 flight.arrival_time%type;
+    v_total_time                   flight.total_time%type;
+    v_direct_flight                flight.direct_flight%type;
+    v_price                        flight.price%type;
+BEGIN
+    select destination into v_destination from flight where air_code = a_air_code;
+    select airline_name into v_airline_name from flight where air_code = a_air_code;
+    select dep_time into v_dep_time from flight where air_code = a_air_code;
+    select arrival_time into v_arrival_time from flight where air_code = a_air_code;
+    select total_time into v_total_time from flight where air_code = a_air_code;
+    select direct_flight into v_direct_flight from flight where air_code = a_air_code;
+    select price into v_price from flight where air_code = a_air_code;
+    insert into flight_basket values(a_air_code, v_destination, v_airline_name, v_dep_time, v_arrival_time,
+    v_total_time, v_direct_flight, v_price, a_user_id, a_dep_date, a_seat_no);
+    commit;
+END;

@@ -1,0 +1,8 @@
+create or replace procedure delete_flight_reserv(
+    a_user_id                IN login.user_id%TYPE,
+    a_air_code               IN flight_reserv.air_code%TYPE
+)IS
+BEGIN
+    delete from flight_reserv where userid = a_user_id and air_code = a_air_code;
+    commit;
+END;

@@ -1,0 +1,15 @@
+create or replace procedure create_resort_review(
+    a_user_id                  IN login.user_id%type,
+    a_resort_name              IN resort_reserv.resort_name%type,
+    a_write_date               IN resort_review.write_date%type,
+    a_user_rating              IN resort_review.user_rating%type,
+    a_user_comment             IN resort_review.user_comment%type
+)IS
+    v_resort_place             resort_reserv.resort_place%type;
+    v_use_date                 resort_reserv.use_date%type;
+BEGIN
+    select resort_place into v_resort_place from resort_reserv where user_id = a_user_id and resort_name = a_resort_name;
+    select use_date into v_use_date from resort_reserv where user_id = a_user_id and resort_name = a_resort_name;
+    insert into resort_review values(v_resort_place, a_resort_name, a_user_id, v_use_date, a_write_date, a_user_rating, a_user_comment);
+    commit;
+END;

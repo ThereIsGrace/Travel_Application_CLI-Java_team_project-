@@ -1,0 +1,7 @@
+create or replace procedure log_out(
+    a_user_id             IN member.user_id%TYPE
+)IS
+BEGIN
+    delete from login where user_id = a_user_id;
+    commit;
+END;
