@@ -1,0 +1,1 @@
+create sequence seq_air start with 100 increment by 100;
