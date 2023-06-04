@@ -28,3 +28,6 @@
 
 ## 요구사항명세
 ![요구](https://github.com/ThereIsGrace/Travel_Application_CLI-Java_team_project-/assets/109272327/55e6404b-682b-431e-8370-2186176d6944)
+
+## ERD
+![ERD](https://github.com/ThereIsGrace/Travel_Application_CLI-Java_team_project-/assets/109272327/9824ce78-3aba-4fc7-9bef-b782ffaf4211)
