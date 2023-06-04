@@ -35,3 +35,8 @@
 ## 주요 기능 시연
 ![ezgif com-video-to-gif](https://github.com/ThereIsGrace/Travel_Application_CLI-Java_team_project-/assets/109272327/4efab321-0964-498f-af26-331b819e8e75)
   
+
+![ezgif com-video-to-gif (1)](https://github.com/ThereIsGrace/Travel_Application_CLI-Java_team_project-/assets/109272327/dedb3696-92cf-493c-a3d2-93093529541a)
+
+
+![ezgif com-video-to-gif (2)](https://github.com/ThereIsGrace/Travel_Application_CLI-Java_team_project-/assets/109272327/7494982b-d694-4780-a979-68e1f71721de)
