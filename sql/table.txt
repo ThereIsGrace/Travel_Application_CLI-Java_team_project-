@@ -1,0 +1,121 @@
+create table flight(
+	air_code         number         not null,
+	destination      varchar2(35)   not null,
+	airline_name     varchar2(35)   not null,
+	dep_time         varchar2(15)   not null,
+	arrival_time     varchar2(15)   not null,
+	total_time       varchar2(15)   not null,
+	direct_flight    varchar2(20)   not null,
+	price            number         not null
+);
+
+create table flight_basket(
+	air_code         number         not null,
+	destination      varchar2(35)   not null,
+	airline_name     varchar2(35)   not null,
+	dep_time         varchar2(15)   not null,
+	arrival_time     varchar2(15)   not null,
+	total_time       varchar2(15)   not null,
+	direct_flight    varchar2(20)   not null,
+	price            number         not null,
+	userid           varchar2(30)   not null,
+	dep_date         date           not null,
+	seat_no          varchar2(10)   not null
+);
+
+create table flight_reserv(
+	air_code         number         not null,
+	destination      varchar2(35)   not null,
+	airline_name     varchar2(35)   not null,
+	dep_time         varchar2(15)   not null,
+	arrival_time     varchar2(15)   not null,
+	total_time       varchar2(15)   not null,
+	direct_flight    varchar2(20)   not null,
+	price            number         not null,
+	userid           varchar2(30)   not null,
+	dep_date         date           not null,
+	seat_no          varchar2(10)   not null
+);
+
+create table login(
+	user_id	     varchar2(30)   primary key,
+	user_pw          varchar2(50)   not null
+);
+
+create table member(
+	user_id          varchar2(30)   primary key,
+	user_pw          varchar2(50)   not null,
+	user_name        varchar2(40)   not null,
+	user_phone       varchar2(50)   not null
+);
+
+create table order_list(
+	user_id          varchar2(30)   not null,
+	prod_name        varchar2(90)   not null,
+	prod_price       number         not null
+);
+
+create table payment(
+	user_id          varchar2(30)   not null,
+	payed_price      number         not null,
+	paydate          date
+);
+
+create table place(
+	country_name     varchar2(50)   not null,
+	place_name       varchar2(50)   not null,
+	travel_time      varchar2(30)   not null
+);
+
+create table resort(
+	resort_place     varchar2(30)   not null,
+	resort_name      varchar2(90)   not null,
+	room_name        varchar2(30)   not null,
+	accomodation     varchar2(30)   not null,
+	feature          varchar2(50)   not null,
+	customer_rating  number(3,2)    not null,
+	resort_price     number         not null
+);
+
+create table resort_basket(
+	resort_place     varchar2(30)   not null,
+	resort_name      varchar2(90)   not null,
+	room_name        varchar2(50)   not null,
+	nights           number         not null,
+	resort_price     number         not null,
+	user_id          varchar2(30)   not null,
+	use_date         date           not null   
+);
+
+create table resort_reserv(
+	resort_place     varchar2(30)   not null,
+	resort_name      varchar2(90)   not null,
+	room_name        varchar2(50)   not null,
+	nights           number         not null,
+	resort_price     number         not null,
+	user_id          varchar2(30)   not null,
+	use_date         date           not null   
+);
+
+create table resort_review(
+	resort_place     varchar2(30)   not null,
+	resort_name      varchar2(90)   not null,
+	user_id          varchar2(30)   not null,
+	use_date         date           not null,
+	write_date       date           not null,
+	user_rating      number         not null,
+	user_comment     clob           
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
