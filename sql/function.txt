@@ -1,0 +1,21 @@
+create or replace function member_login(
+    a_userid        member.user_id%TYPE,
+    a_userpw        member.user_pw%TYPE
+)return PLS_INTEGER
+IS 
+    v_userpw member.user_pw%TYPE;
+    v_result PLS_INTEGER;
+BEGIN
+    SELECT user_pw into v_userpw
+    FROM member
+    WHERE user_id = a_userid;
+
+    if(v_userpw = a_userpw) then
+        return 0;
+    else 
+        return 1;
+    end if;
+exception 
+    WHEN NO_DATA_FOUND THEN
+    return 2;
+end;
