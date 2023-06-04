@@ -40,3 +40,6 @@
 
 
 ![ezgif com-video-to-gif (2)](https://github.com/ThereIsGrace/Travel_Application_CLI-Java_team_project-/assets/109272327/7494982b-d694-4780-a979-68e1f71721de)
+  
+  
+![ezgif com-video-to-gif (3)](https://github.com/ThereIsGrace/Travel_Application_CLI-Java_team_project-/assets/109272327/1ea5c912-077a-4397-b0f1-c1402dceea5e)
