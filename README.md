@@ -31,3 +31,7 @@
 
 ## ERD
 ![ERD](https://github.com/ThereIsGrace/Travel_Application_CLI-Java_team_project-/assets/109272327/9824ce78-3aba-4fc7-9bef-b782ffaf4211)
+
+## 주요 기능 시연
+![ezgif com-video-to-gif](https://github.com/ThereIsGrace/Travel_Application_CLI-Java_team_project-/assets/109272327/4efab321-0964-498f-af26-331b819e8e75)
+  
